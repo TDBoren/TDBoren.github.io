@@ -1,173 +1,227 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <!-- Head --->
-    <head>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- Head --->
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Troy Boren's Portfolio</title>
+    <link rel="stylesheet" href="./CSS/Website_Project_CSS.css">
+    <script src="./JS/Website_Project_JavaScript.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<!-- /Head -->
 
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <link rel="stylesheet" href="./CSS/CSS_Website_Project.css">
-        <title>Troy Boren Portfolio</title>
-    </head>
-    <!-- /Head -->
+<body class="Background">
+<!-- Fade in effect -->
+<!-- This script and function controls our fade in effect -->
+<script>
+document.body.className += ' fade-out';
+    $(function() {
+        $('body').removeClass('fade-out');
+    }
+);
+</script>
 
-    <body class="Background">
+<!-- Navbar -->
+    <div class="Navbar">
+        <a class="active" href="#Home">Home</a>
+        <a href="#Slideshow">Slideshow</a><!-- This is a new section -->
+        <a href="#About">About</a>
+        <a href="#Github">Github</a>
+        <a onclick="openForm()">Contact</a><!-- This makes it so that our openForm function runs when we click Contact on the nav bar -->
+    </div>
+<!-- This alows us to close the form when we click outside the nav bar or contact form -->
+<div class="btn cancel" onclick="closeForm()"></div>
+<!-- /Navbar -->
 
-        <!-- Top Navbar -->
-        <div class="topnav">
-            <a class="active" href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#github">Github</a>
-            <a href="#contact">Contact</a>
-        </div>
-        <!-- /Top Navbar -->
-
-        <!-- Home -->
+<!-- Home -->
+        <div id=Home>
+            <br><!-- Breaks inserted to add space between navbar and first heading -->
             <br>
-            <br>
 
-        <!-- Home Video -->
-        <div id=home>
-            <video autoplay muted loop id="Typing_Video">
-                <source src="./Images/Typing.mp4" type="video/mp4">
-                Your browser does not support HTML5 video.
-            </video>
-        </div>
-        <!-- /Home Video -->
+<!-- Video -->
+        <video autoplay muted loop id="Typing_Video"><!-- Makes the video play automatically, on a loop and with no sound -->
+            <source src="./Images/Typing.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.<!-- Display message if video fails to run -->
+        </video>
+    </div>
+<!-- /Video -->
 
-        <!-- Video Text -->
-        <div class="Video_Text">
-            <div class="background">
-                <div class="transbox">
-                    <h1 style="color:white">Troy Boren's Portfolio
-                    </h1>
-                    <center>"The computer programmer is a creator of universes for which he alone is the lawgiver.<br>
+<!-- Video Text -->
+    <div class="Video_Text">
+        <h1 style="color:white">Troy Boren's Portfolio</h1>
+            <p>
+                <strong>
+                    <center>
+                        <q>The computer programmer is a creator of universes for which he alone is the lawgiver.<br>
                         No playwright, no stage director, no emperor, however powerful, has ever exercised such absolute authority to arrange a stage or<br>
                         field of battle and to command such unswervingly dutiful actors or troops."
-                        <br>-Joseph Weizenbaum</center>
+                        </q>
+                        <br>-Joseph Weizenbaum<br>
                         <br>
-                        <br>
-                        <p>My name is Troy Boren. Welcome to my portfolio website. On it, I will tell you about my background and experience.<br>
-                        Thank you for stopping by and enjoy!</p>
+                        My name is Troy Boren. Welcome to my portfolio website.<br> 
+                        On it, I will tell you about my background and experience.<br>
+                        <br>Thank you for stopping by and enjoy!
+                    </center>
+                </strong>
+            </p>
+    </div>
+    <!-- /Video Text -->
+
+    <!-- /Home -->
+
+<!-- Slideshow -->
+    <div id="Slideshow">
+        <div id="Slideshow_Background"> 
+            <div id="Slideshow_Container">
+            
+                <div class="mySlides fade">
+                    <div class="Slide_Number">1 / 6</div>
+                        <img class="Slide_Show_Images" src="./Images/Picture_of_You.jpg" style="width:100%">
+                            <div class="text">I'm available to assist you on your project!</div>
                 </div>
-            </div>
-        </div>
-        <!-- /Video Text -->
-
-        <!-- /Home -->
-
-        <!-- Laptop-->
-
-        <div id="about">
-            <div class="row_1">
-                <div class="column_1">
-                    <div class="card_1">
-                        <div class="container">
-                            <img src="./Images/laptop.png" alt="Laptop" style="width:100%">
-                        </div>
-                      </div>
-                </div>
-        <!-- /Laptop -->
-
-        <!-- About -->
-
-                <div class="column_2">
-                    <div class="card_2">
-                        <h1>ABOUT</h1>
-                        <p>I am a software developer who loves to code! I also enjoy mountain biking, skiing, and camping with my wife.
-                        <br>
-                        <br>I am a graduate of <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>’s Software Developer Boot Camp, and trained and experienced in the following web and programming languages: HTML, CSS, JavaScript, SQL, C# and more.
-                        <br>
-                        <br>I am a full-stack developer and would love to work with you on your project.<br>
-                        <br>
-                        <a href="#Contact">Contact</a> me below!</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Github -->
-
-        <div id="github">
-            <div class="row_2">
-                <div class="column_3">
-                    <div class="card_3">
-                        <div class="container">
-                            <h1>GitHub</h1>
-				            <p>You can view my coding projects on my GitHub profile here:<br>
-				            <a href="https://github.com/the-tech-academy" target="_blank">The Tech Academy GitHub</a></p>
-                        </div>
-                    </div>
-                </div>
-
-        <!-- /Github -->
-
-        <!-- Github Pic -->
-
-                <div class="column_4">
-                    <div class="card_4">
-                        <div class="container">
-                            <img src="./Images/GitHub.png" alt="Github" style="width:100%">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- /Github Pic -->
-
-        <!-- Contact Pic -->
-
-        <div id="contact">
-            <div class="row_3">
-                <div class="column_5">
-                    <div class="card_5">
-                        <div class="container">
-                            <img src="./Images/Contact.png" alt="Contact" style="width:100%">
-                        </div>
-                    </div>
+                
+                <div class="mySlides fade">
+                    <div class="Slide_Number">2 / 6</div>
+                        <img class="Slide_Show_Images" src="./Images/HTML_CSS_and_JavaScript.jpeg" style="width:100%">
+                            <div class="text">I am a full-stack software developer,<br> trained in:<br>HTML, CSS, JavaScript,</div>
                 </div>
         
-        <!-- /Contact Pic -->
-
-        <!-- Contact Form -->
-                <div class="column_6">
-                    <div class="card_6">
-                        <h1>Contact</h1> 
-                            <form action="" method="get">
-                                <label>Name:</label>
-                                    <input type="text" placeholder="Please enter your name here">
-                                <label>Email:</label>
-                                    <input type="text" id="Email" name="Email" placeholder="Please enter your email here">
-                                <label>Message:</label>
-                                    <input type="text" id="Message" name="Message" placeholder="Please write your message here">
-                                    <input type="submit" value="Submit">
-                            </form>                      
-                    </div>
+                <div class="mySlides fade">
+                    <div class="Slide_Number">3 / 6</div>
+                        <img class="Slide_Show_Images" src="./Images/Python.png" style="width:100%">
+                            <div class="text">the popular programming language Python,</div>
                 </div>
+        
+                <div class="mySlides fade">
+                    <div class="Slide_Number">4 / 6</div>
+                        <img class="Slide_Show_Images" src="./Images/C_Sharp_and_Dot_NET.png" style="width:100%">
+                            <div class="text">C#, .NET Framework, ASP.NET, MVC,</div>
+                </div>
+        
+                <div class="mySlides fade">
+                    <div class="Slide_Number">5 / 6</div>
+                        <img class="Slide_Show_Images" src="./Images/SQL_and_Database.jpg" style="width:100%">
+                         <div class="text">back end development, databases and SQL.</div>
+                    </div>
+        
+                <div class="mySlides fade">
+                    <div class="Slide_Number">6 / 6</div>
+                        <img class="Slide_Show_Images" src="./Images/Coding_1.jpg" style="width:100%">
+                            <div class="text"> 
+                                <a onclick="openForm()" href="#Contact" style="color:white;">Contact me now!</a>
+                            </div>
+                </div>
+    
+                    <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="Next" onclick="plusSlides(1)">&#10095;</a>
             </div>
-        </div>              
-        <!-- / Contact Form -->
+        <br>
+        
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span> 
+                <span class="dot" onclick="currentSlide(2)"></span> 
+                <span class="dot" onclick="currentSlide(3)"></span> 
+                <span class="dot" onclick="currentSlide(4)"></span> 
+                <span class="dot" onclick="currentSlide(5)"></span> 
+                <span class="dot" onclick="currentSlide(6)"></span> 
+            </div>
+        </div>
+    </div>
+        
+<!-- We included our JS function within this file to ensure it was given precedence, this function covers the slideshow -->
+<script>
+    var slideIndex = 1;
+        showSlides(slideIndex);
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}    
+            if (n < 1) {slideIndex = slides.length}
+                for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+    }
+</script>
 
-        <!-- /About -->
+<!-- About -->
+<div class="Row" id="About">
+    <div class="Column_2"><!-- Left Column -->
+        <img src="./Images/Development.jpg" alt="Laptop">
+    </div>
 
-        <!-- Optional JavaScript -->
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    </body>
+    <div class="Column_1"><!-- Right Column -->
+        <h1>About</h1>
+        <p>I am a software developer who loves to code! I also enjoy mountain biking, skiing, and camping with my wife.<br>
+        <br>I am a graduate of <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>â€™s Software Developer Boot Camp, and trained and experienced in the following web and programming languages: HTML, CSS, JavaScript, SQL, C# and more.<br>
+        <br>I am a full-stack developer and would love to work with you on your project. <a href="#Contact">Contact</a> me below!</p>
+    </div>
+</div>
 
-    <!-- Footer section -->
-    
-	<footer>
-		<p>
-            &copy Prosper Consulting Inc.,  <a href="https://learncodinganywhere.com/">The Tech Academy</a></center><br>
-		</p>
+<!-- Github -->
+
+    <div class="Row" id="Github">
+        <div class="Column_1"><!-- Left Column -->
+            <h1>GitHub</h1>
+                <p>You can view my coding projects on my GitHub profile here:<br>
+                <center><a href="https://github.com/TDBoren" target="_blank">Troy Boren GitHub</a></center></p>
+        </div>
+
+        <div class="Column_2"><!-- Right Column -->
+            <a href=" https://github.com/TDBoren" target="_blank"><img src="./Images/GitHub.png" alt="Github"></a>
+        </div>
+    </div>
+</div>
+
+<!-- /Github -->
+
+<!-- Contact -->
+
+    <div id="Contact">
+        <button onclick="openForm()" class="Pop_Up_Button"> CONTACT </button>
+            <div class="form-popup" id="myForm">
+                <form action="https://formspree.io/mlepgzjb" method="POST" class="form-container"> <!-- Here we are using a free online service from https://formspree.io/ to send 
+                our contact form to an email address of our choosing - note: it will not run unless live on the internet, you have to push it to your online website first -->
+                <h1>Contact</h1>
+                        <label for="name"><b>Name</b></label>
+                            <input type="text" placeholder="Please enter your name here" name="name" required>
+                        <label for="phone"><b>Phone</b></label>
+                            <input type="text" placeholder="Please enter your phone number here" name="phone">    
+                        <label for="email"><b>Email</b></label>
+                            <input type="text" placeholder="Please enter your email here" name="email" required>
+                        <label for ="message"><b>Message</b></label>
+                            <input type="text" placeholder="Please write your message here" name="message">
+
+        <button type="submit" class="btn">SUBMIT</button>
+        <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
+                </form>    
+            </div>
+    </div>
+
+<!-- /Contact -->
+
+<!-- Footer section -->
+
+    <footer>
+        <p>
+            <center>&copy Boren Consulting Inc.,  <a href="https://TDBoren.github.io">The Tech Academy</a></center><br>
+        </p>
     </footer>
-    
-    <!-- /Footer -->
 
+<!-- /Footer -->
+
+</body>
 </html>
